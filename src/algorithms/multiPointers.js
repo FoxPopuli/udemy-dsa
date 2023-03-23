@@ -16,5 +16,4 @@ const multiPointers = (arr) => {
     return arr;
 }
 
-const arr1 = [1, 2, 3, 4, 4, 4, 5, 6, 7, 7, 8, 8, 8, 8, 9, 12]
-console.log(multiPointers(arr1));
+export default multiPointers;
