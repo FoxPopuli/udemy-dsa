@@ -3,7 +3,7 @@ const algTimer = (alg) => {
     alg;
     const t2 = performance.now();
 
-    console.log(t2 - t1);
+    console.log((t2 - t1).toFixed(12));
 }
 
 export default algTimer;
