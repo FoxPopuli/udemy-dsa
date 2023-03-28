@@ -41,3 +41,24 @@ const maxSum = (arr, n) => {
 
     return max;
 }
+
+const maxSubarraySum = (arr, n) => {
+    if (n > arr.length) return null;
+
+    let maxSum = 0;
+    let temp = 0;
+    for (let i = 0; i < n; i++) {
+        maxSum += arr[i];
+    }
+
+    temp = maxSum
+    for (let i = n; i < arr.length; i++) {
+        temp = temp - arr[i - n] + arr[i]
+        if (temp > maxSum) {
+            maxSum = temp
+        }
+    }
+
+    return maxSum
+}
+ 
