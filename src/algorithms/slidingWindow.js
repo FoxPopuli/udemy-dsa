@@ -62,3 +62,28 @@ const maxSubarraySum = (arr, n) => {
     return maxSum
 }
  
+
+const minSubArrayLength = (arr, n) => {
+    let sum = 0;
+
+    let max = 0;
+    while (sum <= n) {
+        sum += arr[max];
+        max++;
+
+        if (max > arr.length - 1) return 0;
+    }
+
+    let temp = sum;
+    for (let i = max; i < (arr.length - max); i++) {
+        let j = i - max;
+
+        temp = temp - arr[j] + arr[i];
+
+        while (temp >= n) {
+            temp -= arr[j]
+            j++;
+            max--;
+        }
+    } 
+}
