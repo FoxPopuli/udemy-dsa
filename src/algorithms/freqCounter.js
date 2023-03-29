@@ -94,7 +94,6 @@ const sameFrequency = (n1, n2) => {
     return true;
 }
 
-console.log(sameFrequency(123, 321))
 
 
 // Finds if any arguments are dulplicates (freqCounter)

@@ -4,7 +4,6 @@ export const binarySearch = (arr, val) => {
     let ind = Math.floor((arr.length - 1)/2);
 
     if (arr[ind] === val) return ind;
-    console.log(ind)
 
     let newArr;
     if (arr[ind] < val) {
@@ -13,7 +12,6 @@ export const binarySearch = (arr, val) => {
         newArr = arr.splice(0, ind);
     }
 
-    console.log(newArr)
     binarySearch(newArr, val);
 
 } 
