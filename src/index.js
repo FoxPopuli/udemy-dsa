@@ -4,6 +4,7 @@ import {countUniqueValues, test} from "./algorithms/multiPointers";
 import { longestSequenceNaive } from "./algorithms/slidingWindow";
 import { power } from "./algorithms/recursion";
 import { binarySearch } from "./algorithms/binarySearch";
+import { stringSearchNaive } from "./algorithms/stringSearch";
 
 const arr1 = [1, 2, 3, 4, 4, 4, 5, 6, 7, 7, 8, 8, 8, 9, 12, 10000];
 
