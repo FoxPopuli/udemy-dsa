@@ -1,5 +1,9 @@
 import { swap } from "./helpers";
 
+// Time: Best O(n), average O(n^2), worst O(n^2)
+// Space: O(1)
+// Performs better than merge sort on nearly sorted data (kind of), similar to insertion sort (but slower)
+
 export const bubbleSort = (arr) => {
     let swaps = 1;
 

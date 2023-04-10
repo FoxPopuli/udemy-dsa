@@ -3,9 +3,11 @@ import { swap } from "./helpers";
 const testArr = [1, 2, 3, 1, 2, 54, 23, 6, 1, 67];
 
 // Works like bubble sort in reverse. Loop through, find minimum, swap it with i, increment i, repeat
-// O(n^2)
+// Time: Best, worst and average O(n^2)
+// Space: O(1);
 // Only better than bubble sort if you need to minimize the number of swaps, since we only do n swaps 
 // ie minimize how often we write to memory, super uncommon scenario
+// Sucks pretty hard, almost no reason to use it
 
 export const selectionSort = (arr) => {
     let i = 0;
