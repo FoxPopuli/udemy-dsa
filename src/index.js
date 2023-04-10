@@ -9,10 +9,11 @@ import { bubbleSort } from "./algorithms/bubbleSort";
 import { selectionSort } from "./algorithms/selectionSort";
 import { insertionSort } from "./algorithms/insertionSort";
 import "./algorithms/mergeSort";
+import "./algorithms/radixSort";
 
 const arr1 = [1, 2, 3, 4, 4, 4, 5, 6, 7, 7, 8, 8, 8, 9, 12, 10000];
 
-const arr2 = arr1.map(item => item**2);
+// const arr2 = arr1.map(item => item**2);
 
 const str = "calculate"
 
