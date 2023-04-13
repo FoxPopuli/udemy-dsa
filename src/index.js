@@ -10,6 +10,9 @@ import { selectionSort } from "./algorithms/selectionSort";
 import { insertionSort } from "./algorithms/insertionSort";
 import "./algorithms/mergeSort";
 import "./algorithms/radixSort";
+import "./data-structures/classRefresher"
+
+import "./data-structures/singlyLinkedList"
 
 const arr1 = [1, 2, 3, 4, 4, 4, 5, 6, 7, 7, 8, 8, 8, 9, 12, 10000];
 
