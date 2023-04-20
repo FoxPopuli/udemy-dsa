@@ -12,7 +12,6 @@
 
 
 // import "./data-structures/classRefresher"
-import "./data-structures/singlyLinkedList"
-// import "./data-structures/linkedListTest"
-
+// import "./data-structures/singlyLinkedList"
+import "./data-structures/doublyLinkedLists"
 

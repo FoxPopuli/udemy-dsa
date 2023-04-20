@@ -170,7 +170,28 @@ class SinglyLinkedList {
 
 
     // Classic interview question
+    // Reverse a linked list in place
+    reverse() {
+        // 1) initialize node to OLD HEAD, which will be the new tail;
+        let node = this.head;
 
+        // 2) Swap the head and the tail
+        [this.head, this.tail] = [this.tail, this.head];
+
+        // 3) Initialize prev and next
+        let prev = null;
+        let next;
+
+        // 4) Loop through
+        for (let i = 0; i < this.length; i++) {
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next;
+        }
+
+        return this;
+    }
 }
 
 const list = new SinglyLinkedList()
@@ -180,6 +201,7 @@ list.push('Item 3');
 list.unshift('Item 0');
 
 list.insert(4, 'Item 4');
+list.reverse()
 list.printAll()
 
 
