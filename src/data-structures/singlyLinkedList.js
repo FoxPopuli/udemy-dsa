@@ -192,7 +192,11 @@ class SinglyLinkedList {
 
         return this;
     }
+
 }
+
+
+
 
 const list = new SinglyLinkedList()
 list.push('Item 1');
@@ -200,9 +204,10 @@ list.push('Item 2');
 list.push('Item 3');
 list.unshift('Item 0');
 
-list.insert(4, 'Item 4');
+// list.insert(4, 'Item 4');
 list.reverse()
 list.printAll()
+// console.log(list)
 
 
 

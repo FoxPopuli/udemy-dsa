@@ -1,3 +1,4 @@
+// Downside is that it uses more memory than an SLL
 
 class Node {
     constructor(value) {
@@ -18,9 +19,9 @@ class DoublyLinkedList {
         let node = new Node(value);
 
         if (!this.head) {
+            // Next and prev both point to null. Obvious if you think about it
             this.head = node;
             this.tail = node;
-            this.head.next = this.tail;
         } else {
             let prev = this.tail;
             this.tail.next = node;
@@ -47,6 +48,7 @@ class DoublyLinkedList {
         newNode.next = this.head;
         this.head.prev = newNode;
         this.head = newNode;
+        this.length++;
         return this;
     }
 
@@ -54,6 +56,7 @@ class DoublyLinkedList {
         const oldHead = this.head;
         this.head = this.head.next;
         this.head.prev = null;
+        this.length--;
         return oldHead;
     }
 
@@ -110,11 +113,25 @@ class DoublyLinkedList {
         const node = this.get(index);
         const forward = node.next;
         const back = node.prev;
+
         forward.prev = back;
         back.next = forward;
+        
         this.length--;
         return node;
 
+    }
+
+    reverse() {
+        let node = this.head;
+        [this.head, this.tail] = [this.tail, this.head];
+        let next;
+        for (let i = 0; i < this.length; i++) {
+            next = node.next;
+            [node.next, node.prev] = [node.prev, node.next];
+            node = next;
+        }
+        return this;
     }
 
 
@@ -141,11 +158,16 @@ list.push('Item 1');
 list.push('Item 2');
 list.push('Item 3');
 list.shift('Item 0');
+list.reverse()
+// list.remove(3)
+
 // list.unshift()
-// list.pop()
+// console.log('Poppped:')
+// console.log(list.pop())
+// console.log(`\n`)
 // console.log(list.set('Hello', ))
-list.insert('Sup', 2)
-list.remove(2)
+// list.insert('Sup', 2)
+// list.remove(2)
 list.printNodes()
 // console.log(list.get(2))
 // list.printValues()
