@@ -42,8 +42,13 @@ class DoublyLinkedList {
         return tail;
     }
 
-    shift(value) {
+    unshift(value) {
         const newNode = new Node(value);
+
+        if (this.length === 0) {
+            this.head = newNode;
+            this.tail = newNode;
+        }
 
         newNode.next = this.head;
         this.head.prev = newNode;
@@ -52,11 +57,19 @@ class DoublyLinkedList {
         return this;
     }
 
-    unshift() {
+    shift() {
+        if (this.length === 0) return undefined;
+
         const oldHead = this.head;
         this.head = this.head.next;
-        this.head.prev = null;
+
+        if (this.length === 1) {
+            this.tail = this.head;
+        } else {
+            this.head.prev = null;
+        }
         this.length--;
+        oldHead.next = null;
         return oldHead;
     }
 
@@ -75,6 +88,7 @@ class DoublyLinkedList {
 
         let current = this.get(index);
         current.value = value;
+        return true;
     }
 
     insert(value, index) {
@@ -107,7 +121,7 @@ class DoublyLinkedList {
 
     remove(index) {
 
-        if (index === 0) return this.unshift();
+        if (index === 0) return this.shift();
         if (index === this.length - 1) return this.pop();
         
         const node = this.get(index);
@@ -157,11 +171,13 @@ const list = new DoublyLinkedList();
 list.push('Item 1');
 list.push('Item 2');
 list.push('Item 3');
-list.shift('Item 0');
-list.reverse()
+list.unshift('Item 0');
+console.log(list.shift())
+console.log(list)
+// list.reverse()
 // list.remove(3)
 
-// list.unshift()
+// list.shift()
 // console.log('Poppped:')
 // console.log(list.pop())
 // console.log(`\n`)
