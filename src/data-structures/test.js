@@ -3,7 +3,7 @@ const myFactory = () => {
     
     let myProp = 0;
 
-    const increment = () => myProp++;
+    const increment = () => ++myProp;
     const getProp = () => myProp;
 
     return {myProp, increment, getProp} 

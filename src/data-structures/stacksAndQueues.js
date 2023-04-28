@@ -176,7 +176,7 @@ class ArrayQueue {
     }
 }
 
-class Queue {
+export class Queue {
     // Preferred way of implimenting a queue (SLL)
     constructor() {
         this.first = null;
@@ -211,11 +211,11 @@ class Queue {
 }
 
 const testQueue = new Queue();
-testQueue.enqueue('Entry 1');
-testQueue.enqueue('Entry 2');
-testQueue.enqueue('Entry 3');
-console.log(testQueue)
-console.log(testQueue.dequeue())
-console.log(testQueue.dequeue())
+// testQueue.enqueue('Entry 1');
+// testQueue.enqueue('Entry 2');
+// testQueue.enqueue('Entry 3');
+// console.log(testQueue)
 // console.log(testQueue.dequeue())
-console.log(testQueue)
+// console.log(testQueue.dequeue())
+// // console.log(testQueue.dequeue())
+// console.log(testQueue)

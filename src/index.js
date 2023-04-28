@@ -14,5 +14,7 @@
 // import "./data-structures/classRefresher"
 // import "./data-structures/singlyLinkedList"
 // import "./data-structures/doublyLinkedLists"
-import "./data-structures/stacksAndQueues"
+// import "./data-structures/stacksAndQueues"
+// import "./data-structures/trees"
+import "./data-structures/treeTraversal"
 
