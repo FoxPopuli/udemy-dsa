@@ -16,5 +16,7 @@
 // import "./data-structures/doublyLinkedLists"
 // import "./data-structures/stacksAndQueues"
 // import "./data-structures/trees"
-import "./data-structures/treeTraversal"
+// import "./data-structures/treeTraversal"
+// import "./incomeTax"
+import "./data-structures/binaryHeaps"
 
