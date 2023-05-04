@@ -131,6 +131,7 @@ class PriorityQueue {
     }
 
     bubbleUp() {
+        // Lower value = higher priority (UNIX style)
         let idx = this.values.length - 1;
         const element = this.values[idx];
 
